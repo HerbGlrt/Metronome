@@ -38,6 +38,16 @@ See the `Images/` folder for photos of the assembled device.
   <img src="Images/interna_arduino.png"  width="400">
 </p>
 
+## Final Product
+
+![Input BPM](Images/input_bpm.png)
+![Input Passo](Images/input_passo.png)
+![Visão interna](Images/interna.png)
+![Interna Relay](Images/interna_relay.png)
+![Passo 1](Images/passo1.png)
+
+
+
 
 ## Pinout (as used in the code)
 
