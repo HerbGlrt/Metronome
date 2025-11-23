@@ -30,23 +30,12 @@ See the `Images/` folder for photos of the assembled device.
 </p>
 
 <p align="center">
-  <img src="Images/passo1.png"        width="400">
+  <img src="Images/passo2.png"        width="400">
 </p>
 
 <p align="center">
-  <img src="Images/interna.png"          width="400">
   <img src="Images/interna_arduino.png"  width="400">
 </p>
-
-## Final Product
-
-![Input BPM](Images/input_bpm.png)
-![Input Passo](Images/input_passo.png)
-![Visão interna](Images/interna.png)
-![Interna Relay](Images/interna_relay.png)
-![Passo 1](Images/passo1.png)
-
-
 
 
 ## Pinout (as used in the code)
