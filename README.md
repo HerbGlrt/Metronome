@@ -27,19 +27,10 @@ See the `Images/` folder for photos of the assembled device.
 
 <p align="center">
   <img src="Images/input_bpm.png"  width="400">
-  <img src="Images/input_passo.png" width="400">
 </p>
 
 <p align="center">
-  <img src="Images/interna.png"          width="400">
-  <img src="Images/interna_arduino.png"  width="400">
-</p>
-
-<p align="center">
-  <img src="Images/interna_relay.png" width="400">
   <img src="Images/passo1.png"        width="400">
-  <img src="Images/passo2.png"        width="400">
-  <img src="Images/passo3.png"        width="400">
 </p>
 
 
