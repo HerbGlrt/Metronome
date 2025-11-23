@@ -33,6 +33,11 @@ See the `Images/` folder for photos of the assembled device.
   <img src="Images/passo1.png"        width="400">
 </p>
 
+<p align="center">
+  <img src="Images/interna.png"          width="400">
+  <img src="Images/interna_arduino.png"  width="400">
+</p>
+
 
 ## Pinout (as used in the code)
 
