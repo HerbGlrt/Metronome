@@ -26,15 +26,19 @@ See the `Images/` folder for photos of the assembled device.
 ## Final Product
 
 <p align="center">
-  <img src="Images/input_bpm.png"  width="400">
+  <img src="Images/input_bpm.png" width="800">
 </p>
 
 <p align="center">
-  <img src="Images/passo2.png"        width="400">
+  <img src="https://raw.githubusercontent.com/HerbGlrt/Metronome/main/Images/input_bpm.png" width="400">
 </p>
 
 <p align="center">
-  <img src="Images/interna_arduino.png"  width="400">
+  <img src="Images/passo2.png" width="800">
+</p>
+
+<p align="center">
+  <img src="Images/interna_arduino.png" width="800">
 </p>
 
 
