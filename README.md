@@ -25,14 +25,23 @@ See the `Images/` folder for photos of the assembled device.
 
 ## Final Product
 
-![Input BPM](Images/input_bpm.png)
-![Input Passo](Images/input_passo.png)
-![Visão interna](Images/interna.png)
-![Interna Arduino](Images/interna_arduino.png)
-![Interna Relay](Images/interna_relay.png)
-![Passo 1](Images/passo1.png)
-![Passo 2](Images/passo2.png)
-![Passo 3](Images/passo3.png)
+<p align="center">
+  <img src="Images/input_bpm.png"  width="250">
+  <img src="Images/input_passo.png" width="250">
+</p>
+
+<p align="center">
+  <img src="Images/interna.png"          width="250">
+  <img src="Images/interna_arduino.png"  width="250">
+</p>
+
+<p align="center">
+  <img src="Images/interna_relay.png" width="250">
+  <img src="Images/passo1.png"        width="250">
+  <img src="Images/passo2.png"        width="250">
+  <img src="Images/passo3.png"        width="250">
+</p>
+
 
 ## Pinout (as used in the code)
 
