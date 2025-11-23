@@ -23,6 +23,17 @@ This repository contains an Arduino-based metronome I built for my sister. It em
 
 See the `Images/` folder for photos of the assembled device.
 
+## Final Product
+
+![Input BPM](Images/input_bpm.png)
+![Input Passo](Images/input_passo.png)
+![Visão interna](Images/interna.png)
+![Interna Arduino](Images/interna_arduino.png)
+![Interna Relay](Images/interna_relay.png)
+![Passo 1](Images/passo1.png)
+![Passo 2](Images/passo2.png)
+![Passo 3](Images/passo3.png)
+
 ## Pinout (as used in the code)
 
 These pin assignments match `Metronomo.ino` and can be changed in the source if you need different pins:
@@ -66,62 +77,3 @@ Install them in the Arduino IDE (Sketch → Include Library → Manage Libraries
 - The metronome starts automatically.
 - Adjust BPM quickly with `A` (increase +5) and `B` (decrease -5).
 - Press `*` to re-enter BPM/time signature.
-
-## Customization / How to add features
-
-- To change pin assignments: edit the `ledPins`, `relayPins`, `rowPins`, `colPins`, and `VIBRATION_PIN` arrays at the top of `Metronomo.ino`.
-- To change vibration duration or pattern: edit `endVibrationMillis` and where the vibration pin is asserted/deasserted inside `updateMetronome()`.
-- To change the LED pattern or number of LEDs: update the `ledPins` array and the sequencing logic in `updateMetronome()`.
-- To use an Arduino Uno or Pro Mini: remap pins to avoid conflicts with I2C (A4/A5 on Uno) and ensure you have enough digital pins for relays and LEDs.
-
-If you want a software-only metronome (no relays), remove or comment out relay-related code and use a piezo buzzer instead for a simple click sound.
-
-## Safety notes
-
-- If you switch mains AC with relays, be extremely careful. Enclose exposed mains connections, follow local electrical safety practices, and consider using an opto-isolated relay board or a qualified electrician.
-- Drive the vibration motor and LEDs through suitable driver transistors or resistors if their current exceeds what the Arduino pin can safely supply.
-- Use diodes or snubbers if you change to inductive loads (motors, solenoids) to avoid damaging the microcontroller.
-
-## Troubleshooting
-
-- If the OLED does not show any text: check I2C wiring (SDA/SCL), power (3.3V or 5V depending on module), and correct I2C address (0x3C expected).
-- If the keypad misses keys: verify row/column wiring and shield/noise; try enabling internal pull-ups or add small capacitors for debouncing.
-- If timing feels off at high BPM: the code uses active-waiting in some loops. Consider replacing busy-wait loops with non-blocking timing using millis() or using interrupts for improved precision.
-
-## Code contract / assumptions
-
-- Input: numeric BPM (> 0) and integer numerator (beats per bar).
-- Output: relay toggles, LED sequence, vibration pulses and OLED text representing the metronome state.
-- Error modes: code expects reasonable BPM values (the sketch enforces a minimum of 30 when adjusting with `A`/`B`). Very large BPM values may lead to unusable behavior.
-
-Edge cases to watch for:
-- BPM = 0 or extremely large values — validate input before using in arithmetic that divides time.
-- numerator = 0 — leads to modulo arithmetic issues; avoid zero.
-- Long blocking waits — current code uses short busy-wait loops that may skew timing under heavy CPU load.
-
-## Contributing
-
-If you'd like to contribute enhancements (better timing, additional UI, support for more boards), please:
-
-1. Fork the repository.
-2. Create a new branch for your feature.
-3. Open a pull request with a clear description and, if applicable, photos showing hardware changes.
-
-Small improvements I recommend:
-- Replace busy-wait loops with non-blocking timing using millis() to improve accuracy and responsiveness.
-- Add configuration persistence using EEPROM so the device remembers last BPM and time signature after power cycle.
-- Add support for a piezo buzzer mode (no relays) for a quieter, lower-power option.
-
-## License
-
-This repository is provided under the MIT license by default — change this file if you'd prefer a different license.
-
----
-
-If you'd like, I can also:
-
-- Add a wiring diagram image into `Images/`.
-- Add an example schematic (Fritzing or hand-drawn) and pin labels on a photo.
-- Add a small quick-start section with exact Arduino IDE steps and screenshots.
-
-Tell me which of the extras you'd like and I'll add them.
